@@ -74,28 +74,3 @@ TaskFlow es una aplicación web estilo Trello diseñada para facilitar la gesti�
         | US9  | Eliminar tableros que ya no se utilizan                               | El administrador puede eliminar tableros con confirmación        | Baja      |
         | US10 | Buscar tarjetas por título o descripción                              | El usuario puede buscar tarjetas por palabras clave              | Media     |
 
-        ## Etiquetas sugeridas para Issues
-
-        A continuación se presentan etiquetas recomendadas para organizar y clasificar los issues del proyecto TaskFlow en GitHub:
-
-        - `feature/tablero`
-        - `feature/lista`
-        - `feature/tarjeta`
-        - `feature/arrastrar-soltar`
-        - `feature/asignación-miembros`
-        - `feature/comentarios`
-        - `feature/fecha-límite`
-        - `feature/invitación`
-        - `feature/eliminación`
-        - `feature/búsqueda`
-        - `bug`
-        - `enhancement`
-        - `documentation`
-        - `question`
-        - `priority/alta`
-        - `priority/media`
-        - `priority/baja`
-        - `role/administrador`
-        - `role/usuario`
-
-        Estas etiquetas facilitan la gestión y el seguimiento de tareas, mejoras y reportes en el repositorio.
