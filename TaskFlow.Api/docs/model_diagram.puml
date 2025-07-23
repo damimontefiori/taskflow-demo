@@ -1,0 +1,31 @@
+@startuml
+
+class User {
+    +Id: int
+    +Name: string
+    +Email: string
+}
+
+class Board {
+    +Id: int
+    +Name: string
+    +Description: string
+}
+
+class List {
+    +Id: int
+    +Name: string
+}
+
+class Card {
+    +Id: int
+    +Title: string
+    +Description: string
+    +DueDate: DateTime
+}
+
+User "1" -- "N" Board : owns >
+Board "1" -- "N" List : contains >
+List "1" -- "N" Card : has >
+
+@enduml

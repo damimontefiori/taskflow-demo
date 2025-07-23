@@ -1,6 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using TaskFlow.Api.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+// Configure Entity Framework with SQL Server
+builder.Services.AddDbContext<TaskFlowDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TaskFlowDb")));
+
+// Add controllers
+builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -15,6 +25,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Map controllers
+app.MapControllers();
 
 var summaries = new[]
 {
@@ -42,3 +55,5 @@ record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
+
+
